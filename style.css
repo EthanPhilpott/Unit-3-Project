@@ -64,7 +64,6 @@ header form input {
 header form button {
     background-color: white;
     border: none;
-    /* width: 100%; */
 }
 
 header form img{
@@ -72,9 +71,10 @@ header form img{
 }
 
 .fade-images {
-    padding: 1%;
+    padding: 1vw;
     position: relative;
     margin: 0 auto;
+    height: 42vw;
 }
 
 .img1, .img2, .img3, .img4 {
@@ -123,11 +123,6 @@ header form img{
     }
 }
 
-.filler {
-    height: 40vw;
-    width: 100%;
-}
-
 .tokens {
     display: flex;
     align-items:center;
@@ -136,6 +131,31 @@ header form img{
     width: 100%;
     height: 10vw;
     text-decoration: none;
+    margin-bottom: 1vw;
+    animation: fade-tokens-color-1 .25s;
+    animation-fill-mode: both;
+}
+
+.tokens:hover {
+    animation: fade-tokens-color-2 .25s;
+    animation-fill-mode: both;
+}
+
+@keyframes fade-tokens-color-1 {
+    from {
+        filter: brightness(90%);
+    }
+    to {
+        background-color: var(--light-orange);
+    }
+}
+@keyframes fade-tokens-color-2 {
+    from {
+        background-color: var(--light-orange);
+    }
+    to {
+        filter: brightness(90%);
+    }
 }
 
 .tokens section {
@@ -153,6 +173,7 @@ header form img{
     color: black;
     font-family: 'Oswald', sans-serif;
     font-size: 4vw;
+    text-transform: uppercase;
 }
 
 .games {
@@ -163,5 +184,61 @@ header form img{
 
 .games a {
     width: 25%;
+    height: 15vw;
+    background-color: var(--midtone-orange);
     
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2vw;
+    text-transform: uppercase;
+    text-decoration: none;
+    -webkit-text-stroke: 0.085vw black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: fade-games-color-1 .25s;
+    animation-fill-mode: both;
+
+    background-size: cover;
+}
+
+.games a:hover {
+    animation: fade-games-color-2 .25s;
+    animation-fill-mode: both;
+}
+
+.slots {
+    background-image: url(images/slots2.jpg);
+}
+.roulette {
+    background-image: url(images/rouletteWheel2.jpg);
+}
+.craps {
+    background-image: url(images/dice.jpg);
+}
+.tbd {
+    background-image: url();
+}
+
+.games a+a {
+    margin-left: 1vw;
+}
+
+@keyframes fade-games-color-2 {
+    from {
+        filter: brightness(80%);
+    }
+    to {
+        filter: brightness(100%);
+    }
+}
+@keyframes fade-games-color-1 {
+    from {
+        filter: brightness(100%);
+    }
+    to {
+        filter: brightness(80%);
+    }
 }
