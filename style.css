@@ -42,9 +42,19 @@ header nav img {
     width: 2.5vw;
 }
 
-header nav p {
+header nav h1 {
     font-family: 'Oswald', sans-serif;
-    font-size: 1.5vw;
+    font-size: 2vw;
+    font-weight: lighter;
+    display: inline;
+}
+
+.ug-logo {
+    align-self: flex-start;
+}
+
+.logo {
+    align-self: flex-start;
 }
 
 header form {
@@ -71,35 +81,64 @@ header form img{
 }
 
 .fade-images {
-    padding: 1vw;
+    width: 100%;
+    padding: 1vw ;
     position: relative;
     margin: 0 auto;
     height: 42vw;
 }
 
 .img1, .img2, .img3, .img4 {
-    width: 75%;
+    width: 98%;
     height: 40vw;
-    left: 12.5%;
     visibility: hidden;
     position: absolute;
-    margin-bottom: -50vw;
+    margin-bottom: -40vw;
+    object-fit: cover;
+    
+}
+
+.black-fade {
+    width: 98%;
+    height: 40vw;
+    background-image: linear-gradient(to right, black, rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0),black);
+    position: absolute;
+    margin-bottom: -40vw;
+    z-index: 1;
+    animation: fade-black-fade 8s linear 0s infinite normal
 }
 
 .img1 {
-    animation: fade 16s linear 0s infinite normal;
+    animation: fade 32s linear 0s infinite normal;
 }
 
 .img2 {
-    animation: fade 16s linear 4s infinite normal;
+    animation: fade 32s linear 8s infinite normal;
 }
 
 .img3 {
-    animation: fade 16s linear 8s infinite normal;
+    animation: fade 32s linear 16s infinite normal;
 }
 
 .img4 {
-    animation: fade 16s linear 12s infinite normal;
+    animation: fade 32s linear 24s infinite normal;
+}
+
+@keyframes fade-black-fade {
+    0% {
+        opacity: 0%;
+        visibility: visible;
+    }
+    8% {
+        opacity: 100%;
+    }
+    92% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+        visibility: hidden;
+    }
 }
 
 @keyframes fade {
@@ -115,7 +154,6 @@ header form img{
     }
     25% {
         opacity: 0%;
-        display: none;
     }
     100% {
         opacity: 0%;
@@ -174,6 +212,17 @@ header form img{
     font-family: 'Oswald', sans-serif;
     font-size: 4vw;
     text-transform: uppercase;
+}
+
+article h2 {
+    height: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1%;
+    background-color: var(--midtone-orange);
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5vw;
 }
 
 .games {
@@ -241,4 +290,10 @@ header form img{
     to {
         filter: brightness(80%);
     }
+}
+
+.bottom-bar {
+    height: 2.5vw;
+    margin: 1% 0;
+    background-color: var(--midtone-orange);
 }
