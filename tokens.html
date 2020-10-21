@@ -23,7 +23,19 @@
 
         <main>
             <article>
-                <section class="chips coin">
+                <section id="visual">
+                    <!-- The pictures from the javascript go here -->
+                </section>
+
+                <section>
+                    <form action="data.json">
+                        <input type="range" min="0" max="3125" value="0" name="user.tokenAmt" id="tokenAmt">
+                        <input type="text" value="0" id="tokenAmtText">
+                    </form>
+                </section>
+
+
+                <!-- <section class="chips coin">
                     <img src="images/coin.png" alt="Coin">
                     <p>1.00$</p>
                 </section>
@@ -46,12 +58,14 @@
                 <section class="chips cc">
                     <img src="images/credit-card.png" alt="Credit Card">
                     <p>500.00$</p>
-                </section>
+                </section> -->
             </article>
         </main>
 
         <footer>
             <p>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
         </footer>
+
+        <script src="tokens.js"></script>
     </body>
 </html>
