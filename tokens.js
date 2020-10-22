@@ -35,9 +35,9 @@ slider.oninput = function() {
 // Deals with Input
 
 input.oninput = function() {
-    if (this.value > 3126) {
-        slider.value = 3126;
-        this.value = 3126;
+    if (this.value > 3125) {
+        slider.value = 3125;
+        this.value = 3125;
     } else {
         slider.value = this.value;
     }

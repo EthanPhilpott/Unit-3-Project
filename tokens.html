@@ -14,6 +14,7 @@
 
             <!-- Fonts -->
             <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -22,43 +23,61 @@
         </header>
 
         <main>
-            <article>
+            <article class="select">
                 <section id="visual">
                     <!-- The pictures from the javascript go here -->
                 </section>
 
                 <section>
-                    <form action="data.json">
+                    <form action="data.json" method="POST">
                         <input type="range" min="0" max="3125" value="0" name="user.tokenAmt" id="tokenAmt">
                         <input type="text" value="0" id="tokenAmtText">
                     </form>
                 </section>
+            </article>
 
+            <article class="buy">
+                <section class="info">
+                    <form action="data.json" method="POST">
+                        <fieldset>
+                            <h3>User Information</h3>
 
-                <!-- <section class="chips coin">
-                    <img src="images/coin.png" alt="Coin">
-                    <p>1.00$</p>
+                            <label for="fname">First</label>
+                            <input type="text" name="user.fname" id="fname">
+                            <label for="lname">Last</label>
+                            <input type="text" name="user.lname" id="lname"><br>
+                            <label for="age">Date of Birth</label>
+                            <input type="date" name="user.age" id="age">
+                        </fieldset>
+                        
+                        <fieldset>
+                            <h3>Payment Info</h3>
+
+                            <label for="visa"><input type="radio" name="user.pay" id="visa">Visa</label><br>
+                            <label for="credit"><input type="radio" name="user.pay" id="credit">Credit Card</label><br>
+                            <label for="debit"><input type="radio" name="user.pay" id="debit">Debit Card</label><br>
+                        </fieldset>
+
+                        <fieldset>
+                            <h3>Legality</h3>
+
+                            <label for="tos"><input type="checkbox" name="user.tos" id="tos">Do you agree to our <a href="tos.html" target="_blank">terms of service</a>?</label><br>
+                            <label for="devil"><input type="checkbox" name="user.soul" id="devil">Do you argee to sign your soul away to the devil?</label>
+                        </fieldset>
+                    </form>
                 </section>
-                <section class="chips smallCoin">
-                    <img src="images/get-money.png" alt="Small Amout of Coin">
-                    <p>3.00$</p>
-                </section>  
-                <section class="chips coins" >
-                    <img src="images/coins.png" alt=Coins"">
-                    <p>10.00$</p>
+
+                <section class="payment">
+                    <h3>Payment Details</h3>
+                    <form action="data.json" method="POST">
+                        <label for="tokens">Tokens</label>
+                        <input type="text" value="0" id="tokens">
+                        <label for="price">Price</label>
+                        <input type="text" value="0" id="price">
+
+                        <button type="submit">Checkout</button>
+                    </form>
                 </section>
-                <section class="chips pb">
-                    <img src="images/piggy-bank.png" alt="Piggy Bank">
-                    <p>50.00$</p>
-                </section>
-                <section class="chips rich">
-                    <img src="images/rich.png" alt="Large Amount of Coin">
-                    <p>100.00$</p>
-                </section>
-                <section class="chips cc">
-                    <img src="images/credit-card.png" alt="Credit Card">
-                    <p>500.00$</p>
-                </section> -->
             </article>
         </main>
 

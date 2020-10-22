@@ -27,6 +27,7 @@ body {
 
 header h1 {
     font-family: 'Oswald', sans-serif;
+    font-size: 2.5vw;
 }
 
 article {
@@ -39,6 +40,7 @@ article {
     align-content: center;
     flex-wrap: wrap;
     height: 15vw;
+    margin: 1vw;
 }
 
 #visual img {
@@ -47,7 +49,7 @@ article {
     margin-right: -3vw;
 }
 
-section form {
+.select form {
     width: 90%;
     margin: 0 auto;
     display: flex;
@@ -56,7 +58,7 @@ section form {
     padding: .25vw;
 }
 
-section form input[type="range"] {
+.select form input[type="range"] {
     appearance: none;
     background: none;
     height: 2vw;
@@ -64,12 +66,12 @@ section form input[type="range"] {
     margin-right: .25vw;
     padding: 0 1vw;
 }
-section form input[type="range"]::-webkit-slider-runnable-track {
+.select form input[type="range"]::-webkit-slider-runnable-track {
     background-color: white;
     height: .5vw;
     border-radius: 0.25vw;
 }
-section form input[type="range"]::-webkit-slider-thumb {
+.select form input[type="range"]::-webkit-slider-thumb {
     margin: -0.25vw 0;
     appearance: none;
     width: 1vw;
@@ -79,12 +81,44 @@ section form input[type="range"]::-webkit-slider-thumb {
     cursor: pointer;
 }
 
-section form input[type="text"] {
+.select form input[type="text"] {
     width: 2.5vw;
     height: 2vw;
     border: none;
-    /* border-left: black solid .125vw; */
     flex: 1;
     padding: 0 .5vw;
     text-align: center;
+    font-family: 'Merriweather', serif;
+}
+
+.buy {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    border: .25vw solid var(--midtone-orange);
+}
+
+.buy fieldset {
+    border: none;
+}
+
+.info {
+    flex: 2;
+    font-family: 'Oswald', sans-serif;
+    background-color: var(--light-orange);
+    border-right: .25vw solid var(--midtone-orange);
+    padding: 1vw;
+}
+
+.info h3 {
+    text-align: center;
+}
+
+.info::not(h3) {
+    font-family: 'Merriweather', serif;
+}
+
+.payment {
+    flex: 1;
+    padding: 1vw;
 }
