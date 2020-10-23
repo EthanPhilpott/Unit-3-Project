@@ -60,3 +60,9 @@ input.oninput = function() {
         }
     }
 }
+
+// Deals with the switching of pages
+
+document.getElementById('btn').addEventListener('click', function () {
+    document.querySelector('.box').classList.add('next');
+});

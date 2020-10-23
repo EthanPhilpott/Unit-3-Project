@@ -39,61 +39,109 @@
             <article class="buy">
                 <section class="info">
                     <form action="data.json" method="POST">
-                        <fieldset class="userData">
+                        <fieldset class="user-info">
                             <h3>User Information</h3>
 
                             <label for="fname">First:<input type="text" name="user.fname" id="fname"></label>
                             <label for="lname">Last:<input type="text" name="user.lname" id="lname"></label>
-                            <label for="age">DOB:<input type="date" name="user.age" id="age"></label>
+                            <label for="age">Birthday:<input type="date" name="user.age" id="age"></label>
+                            <label for="email">Email:<input type="text" name="user.email" id="email"></label>
                         </fieldset>
-                        
-                        <fieldset class="boxes">
-                            <fieldset class="payInfo">
-                                <h3>Payment Type</h3>
-    
-                                <label for="visa">
-                                    <input type="radio" name="user.pay" id="visa">
-                                    <span class="bubble"></span>
+
+                        <fieldset class="pay-info">
+                            <h3>Payment Type</h3>
+
+                            <label for="visa">
+                                <input type="radio" name="user.pay" id="visa">
+                                <div class="crop">
                                     <img src="images/visa.png" alt="visa card">
-                                </label>
-                                <label for="discover">
-                                    <input type="radio" name="user.pay" id="discover">
-                                    <span class="bubble"></span>
+                                </div>
+                            </label>
+                            <label for="discover">
+                                <input type="radio" name="user.pay" id="discover">
+                                <div class="crop">
                                     <img src="images/discover.png" alt="discover card">
-                                </label>
-                                <label for="mastercard">
-                                    <input type="radio" name="user.pay" id="mastercard">
-                                    <span class="bubble"></span>
+                                </div>
+                            </label>
+                            <label for="mastercard">
+                                <input type="radio" name="user.pay" id="mastercard">
+                                <div class="crop">
                                     <img src="images/mastercard.png" alt="mastercard card">
-                                </label>
-                            </fieldset>
+                                </div>
+                            </label>
+                            <label for="american-express">
+                                <input type="radio" name="user.pay" id="american-express">
+                                <div class="crop">
+                                    <img src="images/american-express.png" alt="american express card">
+                                </div>
+                            </label>
+                            <label for="amex">
+                                <input type="radio" name="user.pay" id="amex">
+                                <div class="crop">
+                                    <img src="images/amex.png" alt="amex card">
+                                </div>
+                            </label>
+                            <label for="jcb">
+                                <input type="radio" name="user.pay" id="jcb">
+                                <div class="crop">
+                                    <img src="images/jcb.png" alt="jcb card">
+                                </div>
+                            </label>
+
+                            <label for="card-number">
+                                <input type="text" name="user.number" id="card-number">
+                            </label>
+                        </fieldset>
+
+                        <fieldset class="legal">
+                            <h3>Legality</h3>
     
-                            <fieldset class="legal">
-                                <h3>Legality</h3>
-    
-                                <label for="tos"><input type="checkbox" name="user.tos" id="tos"><a href="tos.html" target="_blank">Terms of Service?</a></label>
-                                <label for="devil"><input type="checkbox" name="user.soul" id="devil"><a href="pp.html" target="_blank">Privacy Policy</a></label>
-                            </fieldset>
+                            <label for="tos"><input type="checkbox" name="user.tos" id="tos"><a href="tos.html" target="_blank">Terms of Service?</a></label>
+                            <label for="devil"><input type="checkbox" name="user.soul" id="devil"><a href="pp.html" target="_blank">Privacy Policy</a></label>
+                        </fieldset>
+
+                        <fieldset class="pay-details">
+                            <h3>Payment Details</h3>
+                            
+                            <label for="tokens">Tokens</label>
+                            <input type="text" value="0" id="tokens">
+                            <label for="price">Price</label>
+                            <input type="text" value="0" id="price">
                         </fieldset>
                     </form>
                 </section>
 
-                <section class="payment">
-                    <h3>Payment Details</h3>
-                    <form action="data.json" method="POST">
-                        <label for="tokens">Tokens</label>
-                        <input type="text" value="0" id="tokens">
-                        <label for="price">Price</label>
-                        <input type="text" value="0" id="price">
-
-                        <button type="submit">Checkout</button>
-                    </form>
+                <section class="nav">
+                    <nav>
+                        <label for="page-1">
+                            <input type="radio" name="page-id" id="page-1" checked>
+                            <span class="bubble"></span>
+                        </label>
+                        <label for="page-2">
+                            <input type="radio" name="page-id" id="page-2">
+                            <span class="bubble"></span>
+                        </label>
+                        <label for="page-3">
+                            <input type="radio" name="page-id" id="page-3">
+                            <span class="bubble"></span>
+                        </label>
+                        <label for="page-4">
+                            <input type="radio" name="page-id" id="page-4">
+                            <span class="bubble"></span>
+                        </label>
+                        <label for="page-5">
+                            <input type="radio" name="page-id" id="page-5">
+                            <span class="bubble"></span>
+                        </label>
+                    </nav>
                 </section>
             </article>
         </main>
 
         <footer>
             <p>Creidt Card Icons made by <a href="https://www.vectto.com/">Vectto</a></p>
+            <p>Arrow Icon made by <a href="https://roundicons.com/" title="Roundicons">Roundicons</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
+            <p>Slash Icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
             <p>Money icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
         </footer>
 

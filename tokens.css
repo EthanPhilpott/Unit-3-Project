@@ -56,6 +56,7 @@ article {
     border: var(--midtone-orange) solid .25vw;
     background-color: var(--light-orange);
     padding: .25vw;
+    margin-bottom: 2vw;
 }
 
 .select form input[type="range"] {
@@ -92,167 +93,105 @@ article {
 }
 
 .buy {
-    display: flex;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
-    border: .25vw solid var(--midtone-orange);
+    background-color: var(--light-orange);
+    padding: 2.5vw 5vw;
+    border-radius: 0.25vw;
 }
 
 .buy fieldset {
     border: none;
-    width: 100%;
+    position: relative;
 }
 
-.info {
-    flex: 2;
-    font-family: 'Oswald', sans-serif;
-    background-color: var(--light-orange);
-    border-right: .25vw solid var(--midtone-orange);
-    padding: 1vw;
-}
-
-.info fieldset::not(h3) {   
-    display: flex; 
-}
-
-.info h3 {
-    text-align: center;
-    width: 100%;
-    font-size: 1.5vw;
-}
-
-.info::not(h3) {
-    font-family: 'Merriweather', serif;
-}
-
-.payment {
-    flex: 1;
-    padding: 1vw;
-}
-
-.boxes {
-    display: flex;
-}
-
-.boxes fieldset {
-    flex: 1;
-}
-
-.boxes img {
-    width: 6vw;
-}
-
-.payInfo {
-    display: grid;
-    grid-template-columns: auto;
-    grid-row: auto;
-    padding: .5vw;
-}
-
-.payInfo input {
-    margin: 0;
-    appearance: none;
-    width: 1.5vw;
-    height: 1.5vw;
-    border-radius: 50%;
+.buy form {
+    height:27.5vw;
     background-color: white;
 }
 
-.bubble {
-    border-radius: 50%;
-    width: 1vw;
-    height: 1vw;
-    margin-left: -1.25vw;
-    opacity: 0;
+/* User Info Section */
+.user-info {
+    
 }
 
-.payInfo input:checked ~ .bubble {
-    opacity: 100%;
-    background-color: var(--red);
+/* Payment Info section */
+
+.pay-info {
+    display: none;
 }
 
-.payInfo label {
+/* Legal Section */
+
+.legal {
+    display: none;
+}
+
+/* Final Payment details section */
+
+.pay-details {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Nav */
+
+.buy .nav {
+    background-color: var(--midtone-orange);
+    padding: 1vw;
+}
+
+.buy nav {
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.payInfo h3 {
-    grid-column: 1/4;
-    grid-row: 1/2;
+.buy nav label {
+    margin: 0 1.5vw;
+    width: 1vw;
+    height: 2.5vw;
 }
 
-.payInfo input:nth-child(1) {
-    grid-column: 1/2;
-    grid-row: 2/3;
-}
-.payInfo input:nth-child(2) {
-    grid-column: 2/3;
-    grid-row: 2/3;
-}
-.payInfo input:nth-child(3) {
-    grid-column: 3/4;
-    grid-row: 2/3;
+.buy nav input {
+    appearance: none;
+    position: static;
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 50%;
+    background-color: white;
 }
 
-.userData {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    padding: .5vw;
-    gap: 1vw;
+.bubble {
+    display: block;
+    position: relative;
+    visibility: hidden;
+    top: -1.25vw;
+    width: 1.5vw;
+    height: 1.5vw;
+    border-radius: 50%;
+    margin-left: .5vw;
+    margin-top: -1vw;
+    background-color: var(--red);
 }
 
-.userData h3 {
-    grid-column: 1/-1;
-    grid-row: 1/2;
+nav input:checked ~.bubble {
+    visibility: visible;
+    background-color: var(--red);
 }
-
-.userData label {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.5vw;
-}
-
-.userData label:nth-child(1) {
-    grid-column: 0/1;
-    grid-row: 2/3;
-}
-
-.userData label:nth-child(2) {
-    grid-column: 1/2;
-    grid: 2/3;
-}
-.userData label:nth-child(3) {
-    grid-column: 2/3;
-    grid: 2/3;
-}
-
-.userData input[type="text"] {
-    width: 9vw;
-    height: 2vw;
-}
-
-.userData input[type="date"] {
-    width: 9vw;
-    height: 2vw;
-}
-
-.legal {
-    padding: .5vw;
-}
-
-.legal label {
-    display: flex;
-    align-items: center;
-}
-
-.legal a {
-    margin-left: 1vw;
-    font-size: 1.5vw;
-    color: var(--dark-orange);
-}
-
 
 
