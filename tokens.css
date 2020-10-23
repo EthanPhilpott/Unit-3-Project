@@ -44,8 +44,8 @@ article {
 }
 
 #visual img {
-    width: 7.5vw;
-    height: 7.5vw;
+    width: 7vw;
+    height: 7vw;
     margin-right: -3vw;
 }
 
@@ -100,6 +100,7 @@ article {
 
 .buy fieldset {
     border: none;
+    width: 100%;
 }
 
 .info {
@@ -110,8 +111,14 @@ article {
     padding: 1vw;
 }
 
+.info fieldset::not(h3) {   
+    display: flex; 
+}
+
 .info h3 {
     text-align: center;
+    width: 100%;
+    font-size: 1.5vw;
 }
 
 .info::not(h3) {
@@ -122,3 +129,130 @@ article {
     flex: 1;
     padding: 1vw;
 }
+
+.boxes {
+    display: flex;
+}
+
+.boxes fieldset {
+    flex: 1;
+}
+
+.boxes img {
+    width: 6vw;
+}
+
+.payInfo {
+    display: grid;
+    grid-template-columns: auto;
+    grid-row: auto;
+    padding: .5vw;
+}
+
+.payInfo input {
+    margin: 0;
+    appearance: none;
+    width: 1.5vw;
+    height: 1.5vw;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.bubble {
+    border-radius: 50%;
+    width: 1vw;
+    height: 1vw;
+    margin-left: -1.25vw;
+    opacity: 0;
+}
+
+.payInfo input:checked ~ .bubble {
+    opacity: 100%;
+    background-color: var(--red);
+}
+
+.payInfo label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.payInfo h3 {
+    grid-column: 1/4;
+    grid-row: 1/2;
+}
+
+.payInfo input:nth-child(1) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.payInfo input:nth-child(2) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+.payInfo input:nth-child(3) {
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+.userData {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    padding: .5vw;
+    gap: 1vw;
+}
+
+.userData h3 {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+}
+
+.userData label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5vw;
+}
+
+.userData label:nth-child(1) {
+    grid-column: 0/1;
+    grid-row: 2/3;
+}
+
+.userData label:nth-child(2) {
+    grid-column: 1/2;
+    grid: 2/3;
+}
+.userData label:nth-child(3) {
+    grid-column: 2/3;
+    grid: 2/3;
+}
+
+.userData input[type="text"] {
+    width: 9vw;
+    height: 2vw;
+}
+
+.userData input[type="date"] {
+    width: 9vw;
+    height: 2vw;
+}
+
+.legal {
+    padding: .5vw;
+}
+
+.legal label {
+    display: flex;
+    align-items: center;
+}
+
+.legal a {
+    margin-left: 1vw;
+    font-size: 1.5vw;
+    color: var(--dark-orange);
+}
+
+
+

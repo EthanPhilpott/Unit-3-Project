@@ -39,30 +39,41 @@
             <article class="buy">
                 <section class="info">
                     <form action="data.json" method="POST">
-                        <fieldset>
+                        <fieldset class="userData">
                             <h3>User Information</h3>
 
-                            <label for="fname">First</label>
-                            <input type="text" name="user.fname" id="fname">
-                            <label for="lname">Last</label>
-                            <input type="text" name="user.lname" id="lname"><br>
-                            <label for="age">Date of Birth</label>
-                            <input type="date" name="user.age" id="age">
+                            <label for="fname">First:<input type="text" name="user.fname" id="fname"></label>
+                            <label for="lname">Last:<input type="text" name="user.lname" id="lname"></label>
+                            <label for="age">DOB:<input type="date" name="user.age" id="age"></label>
                         </fieldset>
                         
-                        <fieldset>
-                            <h3>Payment Info</h3>
-
-                            <label for="visa"><input type="radio" name="user.pay" id="visa">Visa</label><br>
-                            <label for="credit"><input type="radio" name="user.pay" id="credit">Credit Card</label><br>
-                            <label for="debit"><input type="radio" name="user.pay" id="debit">Debit Card</label><br>
-                        </fieldset>
-
-                        <fieldset>
-                            <h3>Legality</h3>
-
-                            <label for="tos"><input type="checkbox" name="user.tos" id="tos">Do you agree to our <a href="tos.html" target="_blank">terms of service</a>?</label><br>
-                            <label for="devil"><input type="checkbox" name="user.soul" id="devil">Do you argee to sign your soul away to the devil?</label>
+                        <fieldset class="boxes">
+                            <fieldset class="payInfo">
+                                <h3>Payment Type</h3>
+    
+                                <label for="visa">
+                                    <input type="radio" name="user.pay" id="visa">
+                                    <span class="bubble"></span>
+                                    <img src="images/visa.png" alt="visa card">
+                                </label>
+                                <label for="discover">
+                                    <input type="radio" name="user.pay" id="discover">
+                                    <span class="bubble"></span>
+                                    <img src="images/discover.png" alt="discover card">
+                                </label>
+                                <label for="mastercard">
+                                    <input type="radio" name="user.pay" id="mastercard">
+                                    <span class="bubble"></span>
+                                    <img src="images/mastercard.png" alt="mastercard card">
+                                </label>
+                            </fieldset>
+    
+                            <fieldset class="legal">
+                                <h3>Legality</h3>
+    
+                                <label for="tos"><input type="checkbox" name="user.tos" id="tos"><a href="tos.html" target="_blank">Terms of Service?</a></label>
+                                <label for="devil"><input type="checkbox" name="user.soul" id="devil"><a href="pp.html" target="_blank">Privacy Policy</a></label>
+                            </fieldset>
                         </fieldset>
                     </form>
                 </section>
@@ -82,7 +93,8 @@
         </main>
 
         <footer>
-            <p>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
+            <p>Creidt Card Icons made by <a href="https://www.vectto.com/">Vectto</a></p>
+            <p>Money icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
         </footer>
 
         <script src="tokens.js"></script>
