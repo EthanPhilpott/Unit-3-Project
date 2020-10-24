@@ -61,8 +61,100 @@ input.oninput = function() {
     }
 }
 
-// Deals with the switching of pages
+// switches the slides in the slideshow form
 
-document.getElementById('btn').addEventListener('click', function () {
-    document.querySelector('.box').classList.add('next');
-});
+const form = document.getElementsByClassName("buy-form")[0];
+const navButtons = document.getElementsByName("page-id")
+let slidei = 0;
+
+function radioClicked () {
+    
+    
+    
+    Next();
+}
+
+function Next () {
+    let list = [];
+    for (let i = 0; i < navButtons.length; i++) {
+        list.push(navButtons[i].value)
+        console.log(navButtons[i].value)
+    }
+    slidei = list.indexOf('on');
+    let slide = slides[slidei];
+    
+    opacity = 100
+    let id = setInterval(function () {
+        if (opacity == 0) {
+            clearInterval(id);
+        } else {
+            opacity--;
+            
+            slide.style.opacity = opacity + '%';
+        }
+    }, 2.5);
+    
+
+    setTimeout(function () {
+        height = 27.5;
+        let id = setInterval(function () {
+            if (height == 0) {
+                clearInterval(id);
+            } else {
+                height -= .5;
+                
+                form.style.height = height + 'vw'
+            }
+        }, 6);
+    }, 500)
+
+    
+
+    setTimeout(function () {
+        slide.style.visibility = 'hidden'
+        slidei++;
+        slide = slides[slidei];
+        slide.style.visibility = 'visible'
+        slide.style.opacity = 0;
+        
+
+        setTimeout (function () {
+            height = 0;
+            console.log(slidei)
+            navButtons[slidei].checked = 'checked'
+            let id = setInterval(function () {
+            if (height == 27.5) {
+                clearInterval(id);
+            } else {
+                height += .5;
+                
+                form.style.height = height + 'vw'
+            }
+        }, 6)
+        }, 750);
+
+        setTimeout (function () {
+            opacity = 0
+            let id = setInterval(function () {
+                if (opacity == 100) {
+                    clearInterval(id);
+                } else {
+                    opacity++;
+                    
+                    slide.style.opacity = opacity + '%';
+                }
+            }, 2.5)
+        }, 750+500)
+    }, 750)
+
+    
+
+}
+
+slides = [
+    document.getElementsByClassName("user-info")[0],
+    document.getElementsByClassName("pay-info")[0],
+    document.getElementsByClassName("legal")[0],
+    document.getElementsByClassName("checkout")[0],
+    document.getElementsByClassName("comments")[0]
+]

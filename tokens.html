@@ -39,7 +39,7 @@
 
             <article class="buy">
                 <section class="info">
-                    <form action="data.json" method="POST">
+                    <form action="data.json" method="POST" class="buy-form">
                         <fieldset class="user-info">
                             <h3>Step 1: User Information</h3>
 
@@ -47,22 +47,29 @@
                             <label for="lname" class="lname">Last:<input type="text" name="user.lname" id="lname" placeholder="Doe"></label>
                             <label for="age" class="age">Birthday:
                                 <div class="bDay">
-                                    <input type="text" placeholder="mm">
-                                    <input type="text" placeholder="dd">
-                                    <input type="text" placeholder="yyyy">
+                                    <input type="text" placeholder="mm" id="mm">
+                                    <input type="text" placeholder="dd" id="dd">
+                                    <input type="text" placeholder="yyyy" id="yyyy">
                                 </div>
                             </label>
                             <label for="email" class="email">Email:<input type="text" name="user.email" id="email" placeholder="example@gmail.com"></label>
                             <label for="phone-num" class="phone-num">Phone Number:<input type="text" name="user.phone-num" id="phone-num" placeholder="000-000-0000"></label>
+
+                            <button type="button" onclick="Next()">Next</button>
                         </fieldset>
 
                         <fieldset class="pay-info">
-                            <h3></h3>
+                            <h3>Payment Info</h3>
 
+                            <div class="card-graphic">
+                                
+                            </div>
 
                             <label for="card-number">
                                 <input type="text" name="user.number" id="card-number">
                             </label>
+
+                            <button type="button" onclick="Next()">Next</button>
                         </fieldset>
 
                         <fieldset class="legal">
@@ -70,15 +77,27 @@
     
                             <label for="tos"><input type="checkbox" name="user.tos" id="tos"><a href="tos.html" target="_blank">Terms of Service?</a></label>
                             <label for="devil"><input type="checkbox" name="user.soul" id="devil"><a href="pp.html" target="_blank">Privacy Policy</a></label>
+
+                            <button type="button" onclick="Next()">Next</button>
                         </fieldset>
 
-                        <fieldset class="pay-details">
+                        <fieldset class="checkout">
                             <h3>Payment Details</h3>
                             
                             <label for="tokens">Tokens</label>
                             <input type="text" value="0" id="tokens">
                             <label for="price">Price</label>
                             <input type="text" value="0" id="price">
+
+                            <button type="button" onclick="Next()">Next</button>
+                        </fieldset>
+
+                        <fieldset class="comments">
+                            <h3>Comments</h3>
+
+                            <textarea name="user.comments" id="comments" cols="30" rows="10"></textarea>
+
+                            <button type="submit">Submit</button>
                         </fieldset>
                     </form>
                 </section>
@@ -86,19 +105,23 @@
                 <section class="nav">
                     <nav>
                         <label for="page-1">
-                            <input type="radio" name="page-id" id="page-1" checked>
+                            <input type="radio" name="page-id" id="page-1" checked onclick="radioClicked()">
                             <span class="bubble"></span>
                         </label>
                         <label for="page-2">
-                            <input type="radio" name="page-id" id="page-2">
+                            <input type="radio" name="page-id" id="page-2" value="off" onclick="radioClicked()">
                             <span class="bubble"></span>
                         </label>
                         <label for="page-3">
-                            <input type="radio" name="page-id" id="page-3">
+                            <input type="radio" name="page-id" id="page-3"  value="off" onclick="radioClicked()">
                             <span class="bubble"></span>
                         </label>
                         <label for="page-4">
-                            <input type="radio" name="page-id" id="page-4">
+                            <input type="radio" name="page-id" id="page-4"  value="off" onclick="radioClicked()">
+                            <span class="bubble"></span>
+                        </label>
+                        <label for="page-5">
+                            <input type="radio" name="page-id" id="page-5" onclick="radioClicked()">
                             <span class="bubble"></span>
                         </label>
                     </nav>
