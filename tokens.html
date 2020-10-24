@@ -14,7 +14,8 @@
 
             <!-- Fonts -->
             <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    
     </head>
 
     <body>
@@ -30,7 +31,7 @@
 
                 <section>
                     <form action="data.json" method="POST">
-                        <input type="range" min="0" max="3125" value="0" name="user.tokenAmt" id="tokenAmt">
+                        <input type="range" min="0" max="15624" value="0" name="user.tokenAmt" id="tokenAmt">
                         <input type="text" value="0" id="tokenAmtText">
                     </form>
                 </section>
@@ -40,53 +41,24 @@
                 <section class="info">
                     <form action="data.json" method="POST">
                         <fieldset class="user-info">
-                            <h3>User Information</h3>
+                            <h3>Step 1: User Information</h3>
 
-                            <label for="fname">First:<input type="text" name="user.fname" id="fname"></label>
-                            <label for="lname">Last:<input type="text" name="user.lname" id="lname"></label>
-                            <label for="age">Birthday:<input type="date" name="user.age" id="age"></label>
-                            <label for="email">Email:<input type="text" name="user.email" id="email"></label>
+                            <label for="fname" class="fname">First:<input type="text" name="user.fname" id="fname" placeholder="John"></label>
+                            <label for="lname" class="lname">Last:<input type="text" name="user.lname" id="lname" placeholder="Doe"></label>
+                            <label for="age" class="age">Birthday:
+                                <div class="bDay">
+                                    <input type="text" placeholder="mm">
+                                    <input type="text" placeholder="dd">
+                                    <input type="text" placeholder="yyyy">
+                                </div>
+                            </label>
+                            <label for="email" class="email">Email:<input type="text" name="user.email" id="email" placeholder="example@gmail.com"></label>
+                            <label for="phone-num" class="phone-num">Phone Number:<input type="text" name="user.phone-num" id="phone-num" placeholder="000-000-0000"></label>
                         </fieldset>
 
                         <fieldset class="pay-info">
-                            <h3>Payment Type</h3>
+                            <h3></h3>
 
-                            <label for="visa">
-                                <input type="radio" name="user.pay" id="visa">
-                                <div class="crop">
-                                    <img src="images/visa.png" alt="visa card">
-                                </div>
-                            </label>
-                            <label for="discover">
-                                <input type="radio" name="user.pay" id="discover">
-                                <div class="crop">
-                                    <img src="images/discover.png" alt="discover card">
-                                </div>
-                            </label>
-                            <label for="mastercard">
-                                <input type="radio" name="user.pay" id="mastercard">
-                                <div class="crop">
-                                    <img src="images/mastercard.png" alt="mastercard card">
-                                </div>
-                            </label>
-                            <label for="american-express">
-                                <input type="radio" name="user.pay" id="american-express">
-                                <div class="crop">
-                                    <img src="images/american-express.png" alt="american express card">
-                                </div>
-                            </label>
-                            <label for="amex">
-                                <input type="radio" name="user.pay" id="amex">
-                                <div class="crop">
-                                    <img src="images/amex.png" alt="amex card">
-                                </div>
-                            </label>
-                            <label for="jcb">
-                                <input type="radio" name="user.pay" id="jcb">
-                                <div class="crop">
-                                    <img src="images/jcb.png" alt="jcb card">
-                                </div>
-                            </label>
 
                             <label for="card-number">
                                 <input type="text" name="user.number" id="card-number">
@@ -127,10 +99,6 @@
                         </label>
                         <label for="page-4">
                             <input type="radio" name="page-id" id="page-4">
-                            <span class="bubble"></span>
-                        </label>
-                        <label for="page-5">
-                            <input type="radio" name="page-id" id="page-5">
                             <span class="bubble"></span>
                         </label>
                     </nav>
