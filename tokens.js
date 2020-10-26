@@ -12,10 +12,14 @@ imageValues = {
 slider = document.getElementById("tokenAmt");
 visual = document.getElementById("visual");
 input = document.getElementById("tokenAmtText")
+money = document.getElementById("money")
+tokens = document.getElementById("checkout-tokens")
 
 slider.oninput = function() {
     document.querySelectorAll('.visualImg').forEach(e => e.remove());
     input.value = this.value;
+    tokens.innerHTML = this.value
+    money.innerHTML = this.value * .25 + '$'; 
 
     value = this.value;
 
@@ -32,14 +36,18 @@ slider.oninput = function() {
     }
 }
 
-// Deals with Input
+// Deals with Input for the Slider
 
 input.oninput = function() {
     if (this.value > 15624) {
         slider.value = 15624;
         this.value = 15624;
+        tokens.innerHTML = 15624
+        money.innerHTML = 15624 * .25 + '$'; 
     } else {
         slider.value = this.value;
+        tokens.innerHTML = this.value
+        money.innerHTML = this.value * .25 + '$'; 
     }
     
     
@@ -65,22 +73,38 @@ input.oninput = function() {
 
 const form = document.getElementsByClassName("buy-form")[0];
 const navButtons = document.getElementsByName("page-id")
+const nextButtons = document.getElementsByClassName("next")
+let checkPrev = [true, false, false, false, false]
 let slidei = 0;
 
-function radioClicked () {
-    
-    
-    
-    Next();
-}
+slides = [
+    document.getElementsByClassName("user-info")[0],
+    document.getElementsByClassName("pay-info")[0],
+    document.getElementsByClassName("legal")[0],
+    document.getElementsByClassName("checkout")[0],
+    document.getElementsByClassName("comments")[0]
+]
 
 function Next () {
     let list = [];
+    let checked = [];
+
     for (let i = 0; i < navButtons.length; i++) {
-        list.push(navButtons[i].value)
-        console.log(navButtons[i].value)
+        list.push(navButtons[i].value);
+        checked.push(navButtons[i].checked);
     }
+
+    if (checkPrev.indexOf(true) == checked.indexOf(true)) {
+        checked = checked.concat(checked.splice(0, 4));
+        for (let j = 0; j < checked.length; j++) {
+            navButtons[j].checked = checked[j]
+        }
+    }
+
     slidei = list.indexOf('on');
+
+    navButtons[slidei].value = 'off'
+    
     let slide = slides[slidei];
     
     opacity = 100
@@ -108,20 +132,21 @@ function Next () {
         }, 6);
     }, 500)
 
-    
-
     setTimeout(function () {
         slide.style.visibility = 'hidden'
-        slidei++;
+        
+        slidei = checked.indexOf(true);
         slide = slides[slidei];
+        navButtons[slidei].value = 'on'
+        checkPrev = checked
+        
         slide.style.visibility = 'visible'
         slide.style.opacity = 0;
         
 
         setTimeout (function () {
             height = 0;
-            console.log(slidei)
-            navButtons[slidei].checked = 'checked'
+            
             let id = setInterval(function () {
             if (height == 27.5) {
                 clearInterval(id);
@@ -147,14 +172,5 @@ function Next () {
         }, 750+500)
     }, 750)
 
-    
-
+    checkPrev = checked
 }
-
-slides = [
-    document.getElementsByClassName("user-info")[0],
-    document.getElementsByClassName("pay-info")[0],
-    document.getElementsByClassName("legal")[0],
-    document.getElementsByClassName("checkout")[0],
-    document.getElementsByClassName("comments")[0]
-]

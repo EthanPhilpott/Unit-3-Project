@@ -54,50 +54,84 @@
                             </label>
                             <label for="email" class="email">Email:<input type="text" name="user.email" id="email" placeholder="example@gmail.com"></label>
                             <label for="phone-num" class="phone-num">Phone Number:<input type="text" name="user.phone-num" id="phone-num" placeholder="000-000-0000"></label>
-
-                            <button type="button" onclick="Next()">Next</button>
                         </fieldset>
 
                         <fieldset class="pay-info">
                             <h3>Payment Info</h3>
 
-                            <div class="card-graphic">
-                                
+                            <div class="cc">
+                                <div class="card-graphic card-graphic-front">
+                                    <img src="images/chip.png" alt="Creidt Card Chip">
+                                    <img src="images/" alt="Card Type">
+                                    <p class=cg-number>0000-0000-0000-0000</p>
+                                    <p class=cg-name>John Doe</p>
+                                    <p class=cg-expire-date>00/00</p>
+                                </div>
+                                <div class="card-graphic card-graphic-back">
+                                    <img src="images/chip.png" alt="Creidt Card Chip">
+                                    <img src="images/" alt="Card Type">
+                                    <p class=cg-number>0000-0000-0000-0000</p>
+                                    <p class=cg-name>John Doe</p>
+                                    <p class=cg-expire-date>00/00</p>
+                                </div>
+
+                                <div class="cc-info">
+                                    <label for="card-number">Card Name<input type="text" name="user.name" id="card-name"></label>
+                                    <label for="card-number">Card Number<input type="text" name="user.number" id="card-number"></label>
+                                    <label for="card-number">Expiration Date<input type="text" name="user.expire-date" id="card-expire-date"></label>
+                                    <label for="card-number">Security Code<input type="text" name="user.secure-code" id="card-secure-code"></label>
+                                </div>
                             </div>
-
-                            <label for="card-number">
-                                <input type="text" name="user.number" id="card-number">
-                            </label>
-
-                            <button type="button" onclick="Next()">Next</button>
                         </fieldset>
 
                         <fieldset class="legal">
                             <h3>Legality</h3>
-    
-                            <label for="tos"><input type="checkbox" name="user.tos" id="tos"><a href="tos.html" target="_blank">Terms of Service?</a></label>
-                            <label for="devil"><input type="checkbox" name="user.soul" id="devil"><a href="pp.html" target="_blank">Privacy Policy</a></label>
-
-                            <button type="button" onclick="Next()">Next</button>
+                            
+                            <div class="devil">
+                                <label for="tos">
+                                    <input type="checkbox" name="user.tos" id="tos">
+                                    <span class="check-small"></span>
+                                    <span class="check-big"></span>
+                                    <a href="tos.html" target="_blank">Terms of Service?</a>
+                                </label>
+                                <label for="pp">
+                                    <input type="checkbox" name="user.pp" id="pp">
+                                    <span class="check-small"></span>
+                                    <span class="check-big"></span>
+                                    <a href="pp.html" target="_blank">Privacy Policy</a>
+                                </label>
+                                <label for="newsletter">
+                                    <input type="checkbox" name="user.newsletter" id="newsletter" checked>
+                                    <span class="check-small"></span>
+                                    <span class="check-big"></span>
+                                    <p>By clicking this button you are subscribing to our newsletter</p>
+                                </label>
+                            </div>
                         </fieldset>
 
                         <fieldset class="checkout">
                             <h3>Payment Details</h3>
                             
-                            <label for="tokens">Tokens</label>
-                            <input type="text" value="0" id="tokens">
-                            <label for="price">Price</label>
-                            <input type="text" value="0" id="price">
-
-                            <button type="button" onclick="Next()">Next</button>
+                            <div class="details">
+                                <div class="tokens">
+                                    <p class="details-header">Tokens</p>
+                                    <p id="checkout-tokens">0</p>
+                                </div>
+                                <div class="price">
+                                    <p class="details-header">Price</p>
+                                    <p id="money">0$</p>
+                                </div>
+                            </div>
                         </fieldset>
 
                         <fieldset class="comments">
                             <h3>Comments</h3>
 
-                            <textarea name="user.comments" id="comments" cols="30" rows="10"></textarea>
+                            <textarea name="user.comments" id="comments" placeholder="This is the comment section, if you would like to leave a comment about your purchase please do so here, otherwise leave it blank"></textarea>
 
-                            <button type="submit">Submit</button>
+                            <div class="submit-box">
+                                <button type="submit">Submit</button>
+                            </div>
                         </fieldset>
                     </form>
                 </section>
@@ -105,26 +139,28 @@
                 <section class="nav">
                     <nav>
                         <label for="page-1">
-                            <input type="radio" name="page-id" id="page-1" checked onclick="radioClicked()">
+                            <input type="radio" name="page-id" id="page-1" checked onclick="Next()">
                             <span class="bubble"></span>
                         </label>
                         <label for="page-2">
-                            <input type="radio" name="page-id" id="page-2" value="off" onclick="radioClicked()">
+                            <input type="radio" name="page-id" id="page-2" value="off" onclick="Next()">
                             <span class="bubble"></span>
                         </label>
                         <label for="page-3">
-                            <input type="radio" name="page-id" id="page-3"  value="off" onclick="radioClicked()">
+                            <input type="radio" name="page-id" id="page-3" value="off" onclick="Next()">
                             <span class="bubble"></span>
                         </label>
                         <label for="page-4">
-                            <input type="radio" name="page-id" id="page-4"  value="off" onclick="radioClicked()">
+                            <input type="radio" name="page-id" id="page-4" value="off" onclick="Next()">
                             <span class="bubble"></span>
                         </label>
                         <label for="page-5">
-                            <input type="radio" name="page-id" id="page-5" onclick="radioClicked()">
+                            <input type="radio" name="page-id" id="page-5" value="off" onclick="Next()">
                             <span class="bubble"></span>
+                            
                         </label>
                     </nav>
+                    <button type="button" class="next" onclick="Next()">Next</button>
                 </section>
             </article>
         </main>
@@ -133,6 +169,7 @@
             <p>Creidt Card Icons made by <a href="https://www.vectto.com/">Vectto</a></p>
             <p>Arrow Icon made by <a href="https://roundicons.com/" title="Roundicons">Roundicons</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
             <p>Slash Icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
+            <p>Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
             <p>Money icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
         </footer>
 
