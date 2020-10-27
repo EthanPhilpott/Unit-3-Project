@@ -174,3 +174,24 @@ function Next () {
 
     checkPrev = checked
 }
+
+// Handles The credit card info
+
+ccgNumber = document.getElementsByClassName('ccg-number')[0]
+ccgName = document.getElementsByClassName('ccg-name')[0]
+ccgExpireDate = document.getElementsByClassName('ccg-expire-date')[0]
+
+ccName = document.getElementById("card-name")
+ccNumber = document.getElementById("card-number")
+ccExpireDate = document.getElementById("card-expire-date")
+
+ccNumber.oninput = function () {
+    ccgNumber.innerHTML = this.value
+}
+ccName.oninput = function () {
+    ccgName.innerHTML = this.value
+}
+ccExpireDate.oninput = function () {
+    ccgExpireDate.innerHTML = this.value
+}
+

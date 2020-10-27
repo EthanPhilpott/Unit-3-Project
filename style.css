@@ -297,3 +297,23 @@ article h2 {
     margin: 1% 0;
     background-color: var(--midtone-orange);
 }
+
+footer {
+    padding: 1vw;
+    background-color: var(--light-orange);
+    font-size: 1vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer p {
+    margin: 1vw 1vw;
+    font-family: 'Quicksand', sans-serif;
+}
+
+footer a {
+    text-decoration: none;
+    border-bottom: dotted 0.25vw var(--red);
+    color: black;
+}
